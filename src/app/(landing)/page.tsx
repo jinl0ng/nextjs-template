@@ -20,6 +20,7 @@ import {
 import { BarChart2, TrendingUp, Users, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import LocaleSwitcher from "./locale-switcher";
+import { ThemeSwitcher } from "./theme-switcher";
 
 export default function LandingPage() {
   const t = useTranslations("LandingPage");
@@ -56,6 +57,7 @@ export default function LandingPage() {
             </li>
           </ul>
           <LocaleSwitcher />
+          <ThemeSwitcher />
         </nav>
       </header>
 

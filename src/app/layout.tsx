@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { getLocale, getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+import { ThemeProvider } from "./theme-provider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,10 +19,12 @@ export default async function RootLayout({
   const locale = await getLocale();
   const messages = await getMessages();
   return (
-    <html lang={locale}>
+    <html suppressHydrationWarning lang={locale}>
       <body className="antialiased">
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            {children}
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>
