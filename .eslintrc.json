@@ -1,6 +1,6 @@
 {
   "extends": ["next/core-web-vitals", "next/typescript", "prettier"],
-  "ignorePatterns": ["src/components/ui/**/*"],
+  "ignorePatterns": ["src/components/ui/**/*", "src/hooks/use-toast.ts"],
   "rules": {
     // Avoid hardcoded labels for internationalization
     "react/jsx-no-literals": "error"

@@ -1,4 +1,4 @@
 {
   "plugins": ["prettier-plugin-tailwindcss"],
-  "ignore": ["./src/components/ui/**/*"]
+  "ignore": ["./src/components/ui/**/*", "./src/hooks/use-toast.ts"]
 }
