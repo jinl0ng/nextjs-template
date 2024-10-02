@@ -1,5 +1,83 @@
 {
-  "HomePage": {
-    "title": "你好，世界！"
+  "LandingPage": {
+    "title": "Trenz.ai",
+    "nav": {
+      "features": "功能",
+      "howItWorks": "工作原理",
+      "pricing": "价格"
+    },
+    "hero": {
+      "title": "通过 AI 驱动的洞察力释放 TikTok 的电商潜力",
+      "subtitle": "Trenz.ai 帮助您分析、优化并提升您的 TikTok 电商表现。",
+      "cta": "开始免费试用"
+    },
+    "features": {
+      "title": "主要功能",
+      "analytics": {
+        "title": "高级分析",
+        "description": "通过我们的 AI 驱动分析，深入了解您的 TikTok 电商表现。"
+      },
+      "trends": {
+        "title": "趋势预测",
+        "description": "利用我们的 AI 驱动趋势预测，在 TikTok 电商中保持领先。"
+      },
+      "audience": {
+        "title": "受众洞察",
+        "description": "通过详细的人口统计和行为分析，更好地了解您的受众。"
+      }
+    },
+    "howItWorks": {
+      "title": "工作原理",
+      "step1": {
+        "title": "连接您的 TikTok",
+        "description": "轻松将您的 TikTok Shop 账户与 Trenz.ai 集成。"
+      },
+      "step2": {
+        "title": "分析您的数据",
+        "description": "我们的 AI 处理您的数据以生成可操作的洞察。"
+      },
+      "step3": {
+        "title": "优化与增长",
+        "description": "使用我们的建议改进您的 TikTok 电商策略。"
+      }
+    },
+    "testimonial": {
+      "title": "客户评价",
+      "quote": "Trenz.ai 彻底改变了我们的 TikTok 电商策略。自从使用他们的平台以来，我们的销售额增长了 200%！",
+      "author": "- Sarah Johnson，FashionFrenzy 的 CEO"
+    },
+    "pricing": {
+      "title": "简单透明的价格",
+      "cta": "开始免费试用",
+      "starter": {
+        "title": "入门版",
+        "price": "¥349",
+        "period": "/月",
+        "features": ["基础分析", "每周报告", "最多 5,000 粉丝"]
+      },
+      "pro": {
+        "title": "专业版",
+        "price": "¥699",
+        "period": "/月",
+        "features": ["高级分析", "每日报告", "最多 50,000 粉丝", "趋势预测"]
+      },
+      "enterprise": {
+        "title": "企业版",
+        "price": "定制",
+        "period": "",
+        "features": ["全套分析", "实时报告", "无限粉丝", "专属支持"]
+      }
+    },
+    "footer": {
+      "company": "Trenz.ai",
+      "description": "为 TikTok 上的电商企业提供 AI 驱动的洞察力。",
+      "quickLinks": "快速链接",
+      "contact": {
+        "title": "联系我们",
+        "email": "邮箱：info@trenz.ai",
+        "phone": "电话：(555) 123-4567"
+      },
+      "copyright": "© {year} Trenz.ai. 保留所有权利。"
+    }
   }
 }

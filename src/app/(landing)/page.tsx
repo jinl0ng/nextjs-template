@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -20,18 +21,20 @@ import { BarChart2, TrendingUp, Users, CheckCircle } from "lucide-react";
 import Link from "next/link";
 
 export default function LandingPage() {
+  const t = useTranslations("LandingPage");
+
   return (
     <div className="flex min-h-screen flex-col">
       <header className="container mx-auto flex items-center justify-between py-6">
-        <H1>Trenz.ai</H1>
+        <H2>{t("title")}</H2>
         <nav>
-          <ul className="flex space-x-4">
+          <ul className="flex space-x-6">
             <li>
               <Link
                 href="#features"
                 className="text-muted-foreground hover:text-primary"
               >
-                Features
+                {t("nav.features")}
               </Link>
             </li>
             <li>
@@ -39,7 +42,7 @@ export default function LandingPage() {
                 href="#how-it-works"
                 className="text-muted-foreground hover:text-primary"
               >
-                How It Works
+                {t("nav.howItWorks")}
               </Link>
             </li>
             <li>
@@ -47,7 +50,7 @@ export default function LandingPage() {
                 href="#pricing"
                 className="text-muted-foreground hover:text-primary"
               >
-                Pricing
+                {t("nav.pricing")}
               </Link>
             </li>
           </ul>
@@ -55,159 +58,130 @@ export default function LandingPage() {
       </header>
 
       <main className="flex-grow">
-        {/* Hero Section */}
-        <section className="container mx-auto py-20 text-center">
-          <H1>
-            Unlock TikTok&apos;s E-commerce Potential with AI-Powered Insights
-          </H1>
-          <Lead>
-            Trenz.ai helps you analyze, optimize, and skyrocket your TikTok
-            e-commerce performance.
-          </Lead>
-          <Button size="lg">Start Your Free Trial</Button>
+        <section className="container mx-auto py-32 text-center">
+          <H1 className="mb-6">{t("hero.title")}</H1>
+          <Lead className="mb-8">{t("hero.subtitle")}</Lead>
+          <Button size="lg" className="px-8 py-3 text-lg">
+            {t("hero.cta")}
+          </Button>
         </section>
 
-        {/* Features Section */}
         <section id="features" className="container mx-auto py-20">
-          <H2>Key Features</H2>
+          <H2 className="mb-12">{t("features.title")}</H2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <FeatureCard
               icon={<BarChart2 className="text-primary h-10 w-10" />}
-              title="Advanced Analytics"
-              description="Get deep insights into your TikTok e-commerce performance with our AI-powered analytics."
+              title={t("features.analytics.title")}
+              description={t("features.analytics.description")}
             />
             <FeatureCard
               icon={<TrendingUp className="text-primary h-10 w-10" />}
-              title="Trend Prediction"
-              description="Stay ahead of the curve with our AI-driven trend prediction for TikTok e-commerce."
+              title={t("features.trends.title")}
+              description={t("features.trends.description")}
             />
             <FeatureCard
               icon={<Users className="text-primary h-10 w-10" />}
-              title="Audience Insights"
-              description="Understand your audience better with detailed demographic and behavioral analysis."
+              title={t("features.audience.title")}
+              description={t("features.audience.description")}
             />
           </div>
         </section>
 
-        {/* How It Works Section */}
         <section id="how-it-works" className="bg-muted py-20">
           <div className="container mx-auto">
-            <H2>How It Works</H2>
+            <H2 className="mb-12">{t("howItWorks.title")}</H2>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
               <Step
                 number={1}
-                title="Connect Your TikTok"
-                description="Easily integrate your TikTok Shop account with Trenz.ai."
+                title={t("howItWorks.step1.title")}
+                description={t("howItWorks.step1.description")}
               />
               <Step
                 number={2}
-                title="Analyze Your Data"
-                description="Our AI processes your data to generate actionable insights."
+                title={t("howItWorks.step2.title")}
+                description={t("howItWorks.step2.description")}
               />
               <Step
                 number={3}
-                title="Optimize & Grow"
-                description="Use our recommendations to improve your TikTok e-commerce strategy."
+                title={t("howItWorks.step3.title")}
+                description={t("howItWorks.step3.description")}
               />
             </div>
           </div>
         </section>
 
-        {/* Testimonial Section */}
         <section className="container mx-auto py-20">
-          <H2>What Our Customers Say</H2>
+          <H2 className="mb-12">{t("testimonial.title")}</H2>
           <Card className="mx-auto max-w-3xl">
             <CardContent className="pt-6">
-              <Blockquote>
-                &quot;Trenz.ai has completely transformed our TikTok e-commerce
-                strategy. We&apos;ve seen a 200% increase in sales since using
-                their platform!&quot;
-              </Blockquote>
-              <P>- Sarah Johnson, CEO of FashionFrenzy</P>
+              <Blockquote>{t("testimonial.quote")}</Blockquote>
+              <P>{t("testimonial.author")}</P>
             </CardContent>
           </Card>
         </section>
 
-        {/* Pricing Section */}
         <section id="pricing" className="bg-muted py-20">
           <div className="container mx-auto">
-            <H2>Simple, Transparent Pricing</H2>
+            <H2 className="mb-12">{t("pricing.title")}</H2>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
               <PricingCard
-                title="Starter"
-                price="$49"
-                period="/month"
-                features={[
-                  "Basic analytics",
-                  "Weekly reports",
-                  "Up to 5,000 followers",
-                ]}
+                title={t("pricing.starter.title")}
+                price={t("pricing.starter.price")}
+                period={t("pricing.starter.period")}
+                features={t.raw("pricing.starter.features")}
               />
               <PricingCard
-                title="Pro"
-                price="$99"
-                period="/month"
-                features={[
-                  "Advanced analytics",
-                  "Daily reports",
-                  "Up to 50,000 followers",
-                  "Trend predictions",
-                ]}
+                title={t("pricing.pro.title")}
+                price={t("pricing.pro.price")}
+                period={t("pricing.pro.period")}
+                features={t.raw("pricing.pro.features")}
                 highlighted={true}
               />
               <PricingCard
-                title="Enterprise"
-                price="Custom"
-                period=""
-                features={[
-                  "Full-suite analytics",
-                  "Real-time reporting",
-                  "Unlimited followers",
-                  "Dedicated support",
-                ]}
+                title={t("pricing.enterprise.title")}
+                price={t("pricing.enterprise.price")}
+                period={t("pricing.enterprise.period")}
+                features={t.raw("pricing.enterprise.features")}
               />
             </div>
           </div>
         </section>
       </main>
 
-      <footer className="bg-secondary text-secondary-foreground py-12">
+      <footer className="bg-secondary text-secondary-foreground py-16">
         <div className="container mx-auto grid grid-cols-1 gap-8 md:grid-cols-3">
           <div>
-            <H3>Trenz.ai</H3>
-            <P>
-              Empowering e-commerce businesses on TikTok with AI-driven
-              insights.
-            </P>
+            <H3>{t("footer.company")}</H3>
+            <P>{t("footer.description")}</P>
           </div>
           <div>
-            <H4>Quick Links</H4>
+            <H4>{t("footer.quickLinks")}</H4>
             <ul className="space-y-2">
               <li>
                 <Link href="#features" className="hover:underline">
-                  Features
+                  {t("nav.features")}
                 </Link>
               </li>
               <li>
                 <Link href="#how-it-works" className="hover:underline">
-                  How It Works
+                  {t("nav.howItWorks")}
                 </Link>
               </li>
               <li>
                 <Link href="#pricing" className="hover:underline">
-                  Pricing
+                  {t("nav.pricing")}
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <H4>Contact Us</H4>
-            <P>Email: info@trenz.ai</P>
-            <P>Phone: (555) 123-4567</P>
+            <H4>{t("footer.contact.title")}</H4>
+            <P>{t("footer.contact.email")}</P>
+            <P>{t("footer.contact.phone")}</P>
           </div>
         </div>
         <div className="border-secondary-foreground/10 mt-8 border-t pt-8 text-center">
-          <P>&copy; 2024 Trenz.ai. All rights reserved.</P>
+          <P>{t("footer.copyright", { year: new Date().getFullYear() })}</P>
         </div>
       </footer>
     </div>
@@ -222,13 +196,13 @@ interface FeatureCardProps {
 
 function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
-    <Card>
+    <Card className="transition-shadow duration-300 hover:shadow-lg">
       <CardHeader>
-        <div className="mb-2">{icon}</div>
-        <CardTitle>{title}</CardTitle>
+        <div className="mb-4">{icon}</div>
+        <CardTitle className="text-2xl">{title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <p>{description}</p>
+        <p className="text-muted-foreground">{description}</p>
       </CardContent>
     </Card>
   );
@@ -267,6 +241,8 @@ function PricingCard({
   features,
   highlighted = false,
 }: PricingCardProps) {
+  const t = useTranslations("LandingPage");
+
   return (
     <Card className={highlighted ? "border-primary" : ""}>
       <CardHeader>
@@ -291,7 +267,7 @@ function PricingCard({
           className="w-full"
           variant={highlighted ? "default" : "outline"}
         >
-          Get Started
+          {t("pricing.cta")}
         </Button>
       </CardFooter>
     </Card>

@@ -1,5 +1,97 @@
 {
-  "HomePage": {
-    "title": "Hello world!"
+  "LandingPage": {
+    "title": "Trenz.ai",
+    "nav": {
+      "features": "Features",
+      "howItWorks": "How It Works",
+      "pricing": "Pricing"
+    },
+    "hero": {
+      "title": "Unlock TikTok's E-commerce Potential with AI-Powered Insights",
+      "subtitle": "Trenz.ai helps you analyze, optimize, and skyrocket your TikTok e-commerce performance.",
+      "cta": "Start Your Free Trial"
+    },
+    "features": {
+      "title": "Key Features",
+      "analytics": {
+        "title": "Advanced Analytics",
+        "description": "Get deep insights into your TikTok e-commerce performance with our AI-powered analytics."
+      },
+      "trends": {
+        "title": "Trend Prediction",
+        "description": "Stay ahead of the curve with our AI-driven trend prediction for TikTok e-commerce."
+      },
+      "audience": {
+        "title": "Audience Insights",
+        "description": "Understand your audience better with detailed demographic and behavioral analysis."
+      }
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "step1": {
+        "title": "Connect Your TikTok",
+        "description": "Easily integrate your TikTok Shop account with Trenz.ai."
+      },
+      "step2": {
+        "title": "Analyze Your Data",
+        "description": "Our AI processes your data to generate actionable insights."
+      },
+      "step3": {
+        "title": "Optimize & Grow",
+        "description": "Use our recommendations to improve your TikTok e-commerce strategy."
+      }
+    },
+    "testimonial": {
+      "title": "What Our Customers Say",
+      "quote": "Trenz.ai has completely transformed our TikTok e-commerce strategy. We've seen a 200% increase in sales since using their platform!",
+      "author": "- Sarah Johnson, CEO of FashionFrenzy"
+    },
+    "pricing": {
+      "title": "Simple, Transparent Pricing",
+      "cta": "Get Started",
+      "starter": {
+        "title": "Starter",
+        "price": "$49",
+        "period": "/month",
+        "features": [
+          "Basic analytics",
+          "Weekly reports",
+          "Up to 5,000 followers"
+        ]
+      },
+      "pro": {
+        "title": "Pro",
+        "price": "$99",
+        "period": "/month",
+        "features": [
+          "Advanced analytics",
+          "Daily reports",
+          "Up to 50,000 followers",
+          "Trend predictions"
+        ]
+      },
+      "enterprise": {
+        "title": "Enterprise",
+        "price": "Custom",
+        "period": "",
+        "features": [
+          "Full-suite analytics",
+          "Real-time reporting",
+          "Unlimited followers",
+          "Dedicated support"
+        ]
+      }
+    },
+    "footer": {
+      "company": "Trenz.ai",
+      "description": "Empowering e-commerce businesses on TikTok with AI-driven insights.",
+      "quickLinks": "Quick Links",
+      "contact": {
+        "title": "Contact Us",
+        "email": "Email: info@trenz.ai",
+        "phone": "Phone: (555) 123-4567"
+      },
+      "copyright": "© {year} Trenz.ai. All rights reserved."
+    }
   }
 }
