@@ -2,3 +2,4 @@
 - setup tailwind
 - setup shadcn
 - setup next-intl
+- add simple landing page
