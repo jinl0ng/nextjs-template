@@ -93,5 +93,8 @@
       },
       "copyright": "© {year} Trenz.ai. All rights reserved."
     }
+  },
+  "LocaleSwitcher": {
+    "switchTo": "Switch to {locale}"
   }
 }

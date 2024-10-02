@@ -79,5 +79,8 @@
       },
       "copyright": "© {year} Trenz.ai. 保留所有权利。"
     }
+  },
+  "LocaleSwitcher": {
+    "switchTo": "切换到 {locale}"
   }
 }

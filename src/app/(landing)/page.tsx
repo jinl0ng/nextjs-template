@@ -19,6 +19,7 @@ import {
 } from "@/components/ui/typography";
 import { BarChart2, TrendingUp, Users, CheckCircle } from "lucide-react";
 import Link from "next/link";
+import LocaleSwitcher from "./locale-switcher";
 
 export default function LandingPage() {
   const t = useTranslations("LandingPage");
@@ -27,8 +28,8 @@ export default function LandingPage() {
     <div className="flex min-h-screen flex-col">
       <header className="container mx-auto flex items-center justify-between py-6">
         <H2>{t("title")}</H2>
-        <nav>
-          <ul className="flex space-x-6">
+        <nav className="flex items-center">
+          <ul className="mr-4 flex space-x-6">
             <li>
               <Link
                 href="#features"
@@ -54,6 +55,7 @@ export default function LandingPage() {
               </Link>
             </li>
           </ul>
+          <LocaleSwitcher />
         </nav>
       </header>
 
