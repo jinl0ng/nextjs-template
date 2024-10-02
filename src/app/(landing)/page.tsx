@@ -1,4 +1,8 @@
+import Link from "next/link";
+
+import { BarChart2, CheckCircle, TrendingUp, Users } from "lucide-react";
 import { useTranslations } from "next-intl";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -9,16 +13,15 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import {
+  Blockquote,
   H1,
   H2,
   H3,
   H4,
-  P,
-  Blockquote,
   Lead,
+  P,
 } from "@/components/ui/typography";
-import { BarChart2, TrendingUp, Users, CheckCircle } from "lucide-react";
-import Link from "next/link";
+
 import LocaleSwitcher from "./locale-switcher";
 import { ThemeSwitcher } from "./theme-switcher";
 
@@ -74,17 +77,17 @@ export default function LandingPage() {
           <H2 className="mb-12">{t("features.title")}</H2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <FeatureCard
-              icon={<BarChart2 className="text-primary h-10 w-10" />}
+              icon={<BarChart2 className="h-10 w-10 text-primary" />}
               title={t("features.analytics.title")}
               description={t("features.analytics.description")}
             />
             <FeatureCard
-              icon={<TrendingUp className="text-primary h-10 w-10" />}
+              icon={<TrendingUp className="h-10 w-10 text-primary" />}
               title={t("features.trends.title")}
               description={t("features.trends.description")}
             />
             <FeatureCard
-              icon={<Users className="text-primary h-10 w-10" />}
+              icon={<Users className="h-10 w-10 text-primary" />}
               title={t("features.audience.title")}
               description={t("features.audience.description")}
             />
@@ -152,7 +155,7 @@ export default function LandingPage() {
         </section>
       </main>
 
-      <footer className="bg-secondary text-secondary-foreground py-16">
+      <footer className="bg-secondary py-16 text-secondary-foreground">
         <div className="container mx-auto grid grid-cols-1 gap-8 md:grid-cols-3">
           <div>
             <H3>{t("footer.company")}</H3>
@@ -184,7 +187,7 @@ export default function LandingPage() {
             <P>{t("footer.contact.phone")}</P>
           </div>
         </div>
-        <div className="border-secondary-foreground/10 mt-8 border-t pt-8 text-center">
+        <div className="mt-8 border-t border-secondary-foreground/10 pt-8 text-center">
           <P>{t("footer.copyright", { year: new Date().getFullYear() })}</P>
         </div>
       </footer>
@@ -221,7 +224,7 @@ interface StepProps {
 function Step({ number, title, description }: StepProps) {
   return (
     <div className="text-center">
-      <div className="bg-primary text-primary-foreground mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full text-xl font-bold">
+      <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-xl font-bold text-primary-foreground">
         {number}
       </div>
       <h3 className="mb-2 text-xl font-semibold">{title}</h3>
@@ -260,7 +263,7 @@ function PricingCard({
         <ul className="space-y-2">
           {features.map((feature, index) => (
             <li key={index} className="flex items-center">
-              <CheckCircle className="text-primary mr-2" size={20} />
+              <CheckCircle className="mr-2 text-primary" size={20} />
               {feature}
             </li>
           ))}

@@ -1,12 +1,14 @@
-import { getRequestConfig } from "next-intl/server";
 import { headers as getHeaders } from "next/headers";
-import { i18n } from "./config";
-import Negotiator from "negotiator";
 import { cookies } from "next/headers";
+
+import Negotiator from "negotiator";
+import { getRequestConfig } from "next-intl/server";
+
+import { i18n } from "./config";
 
 async function getLocaleByHeader(
   serverAvailableLocales: string[],
-  defaultLocale: string,
+  defaultLocale: string
 ) {
   // Negotiator expects plain object so we need to transform headers
   const negotiatorHeaders: Record<string, string> = {};
@@ -43,7 +45,7 @@ export default getRequestConfig(async () => {
   } else {
     const locale = await getLocaleByHeader(
       serverAvailableLocales,
-      defaultLocale,
+      defaultLocale
     );
     return {
       locale,

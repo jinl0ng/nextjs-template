@@ -1,6 +1,9 @@
 "use client";
+
 import { useLocale, useTranslations } from "next-intl";
+
 import { Button } from "@/components/ui/button";
+
 import { switchLocale } from "./locale-switch.action";
 
 export default function LocaleSwitcher() {
