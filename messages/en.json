@@ -95,6 +95,6 @@
     }
   },
   "LocaleSwitcher": {
-    "switchTo": "Switch to {locale}"
+    "switchTo": "{locale}"
   }
 }
