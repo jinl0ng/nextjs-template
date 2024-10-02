@@ -1,3 +1,4 @@
 - setup prettier
 - setup tailwind
 - setup shadcn
+- setup next-intl
