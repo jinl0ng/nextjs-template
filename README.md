@@ -3,3 +3,17 @@
 - setup shadcn
 - setup next-intl
 - add simple landing page
+- setup auth
+- setup prisma
+- setup typed env (t3-env/dotenvx)
+- setup project structure
+- setup state management
+  - client state (zustand)
+  - server state (react query)
+- setup server action (zsa)
+- setup runtime typecheck (zod)
+- setup test (vitest/testing-library/playwright)
+- setup build and deploy (docker/docker-compose/makefile)
+- setup sentry
+- setup utopia
+- setup nextui (optional)
