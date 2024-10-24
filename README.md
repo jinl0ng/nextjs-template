@@ -6,7 +6,7 @@
 - setup auth
 - setup prisma
 - setup typed env (t3-env/dotenvx)
-- setup project structure
+- setup project structure (bulletproof)
 - setup state management
   - client state (zustand)
   - server state (react query)
