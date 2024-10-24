@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { BarChart2, CheckCircle, TrendingUp, Users } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -21,12 +22,19 @@ import {
   Lead,
   P,
 } from "@/components/ui/typography";
+import { Locale } from "@/i18n/config";
 
 import LocaleSwitcher from "./locale-switcher";
 import { ThemeSwitcher } from "./theme-switcher";
 
-export default function LandingPage() {
-  const t = useTranslations("LandingPage");
+export default async function LandingPage({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("LandingPage");
 
   return (
     <div className="flex min-h-screen flex-col">
