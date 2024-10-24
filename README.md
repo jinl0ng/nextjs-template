@@ -17,3 +17,4 @@
 - setup sentry
 - setup utopia
 - setup nextui (optional)
+- setup payment (stripe/lemonsqueezy)
