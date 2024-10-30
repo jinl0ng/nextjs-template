@@ -14,6 +14,7 @@
 - setup runtime typecheck (zod)
 - setup test (vitest/testing-library/playwright)
 - setup build and deploy (docker/docker-compose/makefile)
+  - setup cache (redis)
 - setup sentry
 - setup utopia
 - setup nextui (optional)

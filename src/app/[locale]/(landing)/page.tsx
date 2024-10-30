@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Suspense } from "react";
 
 import { BarChart2, CheckCircle, TrendingUp, Users } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -67,7 +68,9 @@ export default async function LandingPage({
               </Link>
             </li>
           </ul>
-          <LocaleSwitcher />
+          <Suspense fallback={null}>
+            <LocaleSwitcher />
+          </Suspense>
           <ThemeSwitcher />
         </nav>
       </header>
