@@ -1,4 +1,5 @@
 import { PrismaClient } from "@prisma/client";
+import { createSoftDeleteExtension } from "prisma-extension-soft-delete";
 
 declare global {
   // eslint-disable-next-line no-var
@@ -6,13 +7,28 @@ declare global {
 }
 
 let prisma: PrismaClient;
+const softDeleteExtension = createSoftDeleteExtension({
+  models: {
+    Post: true,
+    User: true,
+  },
+  defaultConfig: {
+    field: "deletedAt",
+    createValue: (deleted) => {
+      if (deleted) return new Date();
+      return null;
+    },
+  },
+});
 
 // eslint-disable-next-line n/no-process-env
 if (process.env.NODE_ENV === "production") {
-  prisma = new PrismaClient();
+  const client = new PrismaClient();
+  prisma = client.$extends(softDeleteExtension) as PrismaClient;
 } else {
   if (!global.__database__) {
-    global.__database__ = new PrismaClient();
+    const client = new PrismaClient();
+    global.__database__ = client.$extends(softDeleteExtension) as PrismaClient;
   }
   prisma = global.__database__;
 }

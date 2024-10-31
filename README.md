@@ -1,13 +1,19 @@
+# Done
+
 - setup prettier
 - setup tailwind
 - setup shadcn
 - setup next-intl
 - add simple landing page
-- setup auth
 - setup prisma
   - multiple envs
   - soft delete
 - setup typed env (t3-env/dotenvx)
+
+# Todo
+
+- setup auth
+- setup nuqs
 - setup project structure (bulletproof)
 - setup state management
   - client state (zustand)

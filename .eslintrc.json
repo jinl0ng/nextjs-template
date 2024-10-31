@@ -3,7 +3,7 @@
   "ignorePatterns": ["src/components/ui/**/*", "src/hooks/use-toast.ts"],
   "plugins": ["check-file", "n"],
   "rules": {
-    "react/jsx-no-literals": "error",
+    "react/jsx-no-literals": "warn",
     "no-restricted-imports": [
       "error",
       {
