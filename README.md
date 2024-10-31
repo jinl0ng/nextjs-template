@@ -5,6 +5,8 @@
 - add simple landing page
 - setup auth
 - setup prisma
+  - multiple envs
+  - soft delete
 - setup typed env (t3-env/dotenvx)
 - setup project structure (bulletproof)
 - setup state management

@@ -2,15 +2,25 @@
   "name": "nextjs-template-zjl",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev --turbo",
-    "build": "next build",
-    "start": "next start",
+    "dev": "dotenvx run -f .env.development -- next dev --turbo",
+    "build:dev": "dotenvx run -f .env.development -- next build",
+    "start:dev": "dotenvx run -f .env.development -- next start",
+    "build:prod": "dotenvx run -f .env.production -- next build",
+    "start:prod": "dotenvx run -f .env.production -- next start",
     "lint": "next lint",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "db:migrate": "dotenvx run -f .env.development -- prisma migrate dev --name",
+    "db:deploy": "dotenvx run -f .env.production -- prisma migrate deploy && prisma generate",
+    "db:push": "dotenvx run -f .env.development -- prisma db push && prisma generate",
+    "db:seed": "dotenvx run -f .env.development -- tsx ./prisma/seed.ts",
+    "db:wipe": "dotenvx run -f .env.development -- prisma migrate reset --force && prisma db push",
+    "db:studio": "dotenvx run -f .env.development -- prisma studio"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
+    "@prisma/client": "5.21.1",
     "@radix-ui/react-accordion": "^1.2.1",
     "@radix-ui/react-alert-dialog": "^1.1.2",
     "@radix-ui/react-aspect-ratio": "^1.1.0",
@@ -39,6 +49,7 @@
     "@radix-ui/react-toggle": "^1.1.0",
     "@radix-ui/react-toggle-group": "^1.1.0",
     "@radix-ui/react-tooltip": "^1.1.3",
+    "@t3-oss/env-nextjs": "^0.11.1",
     "babel-plugin-react-compiler": "0.0.0-experimental-b4db8c3-20241001",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
@@ -63,6 +74,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@dotenvx/dotenvx": "^1.21.0",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@types/negotiator": "^0.6.3",
     "@types/node": "^20.17.4",
@@ -77,7 +89,9 @@
     "postcss": "^8.4.47",
     "prettier": "3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.8",
+    "prisma": "^5.21.1",
     "tailwindcss": "^3.4.14",
+    "tsx": "^4.19.2",
     "typescript": "^5.6.3"
   },
   "pnpm": {

@@ -1,8 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 
 import { Locale } from "@/i18n/config";
-
-import { ChartComp } from "./chart-comp";
+import db from "@/lib/db";
 
 export default async function Test({
   params,
@@ -11,9 +10,6 @@ export default async function Test({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return (
-    <div>
-      <ChartComp />
-    </div>
-  );
+  const users = await db.user.findMany();
+  return <div>{JSON.stringify(users)}</div>;
 }
