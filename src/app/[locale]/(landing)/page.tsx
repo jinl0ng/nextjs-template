@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Suspense } from "react";
 
 import { BarChart2, CheckCircle, TrendingUp, Users } from "lucide-react";
@@ -24,6 +23,7 @@ import {
   P,
 } from "@/components/ui/typography";
 import { Locale } from "@/i18n/config";
+import { Link } from "@/i18n/routing";
 
 import LocaleSwitcher from "./locale-switcher";
 import { ThemeSwitcher } from "./theme-switcher";
