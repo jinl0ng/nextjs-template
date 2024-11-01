@@ -22,6 +22,7 @@
 - setup test (vitest/playwright) ✅
   - vitest for normal ts tests (\*\*.test.ts files)
   - playwright for e2e tests and component tests (e2e folder & \*\*.spec.ts files)
+- setup hooks lib (usehooks-ts) ✅
 - setup project structure (bulletproof) ⬜️
   - add a todo feature ⬜️
 - setup build and deploy (docker/docker-compose/makefile) ⬜️
