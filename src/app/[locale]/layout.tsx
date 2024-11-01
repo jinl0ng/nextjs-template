@@ -4,8 +4,8 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 
-import { Locale } from "@/i18n/config";
-import { routing } from "@/i18n/routing";
+import { Locale } from "@/lib/i18n/config";
+import { routing } from "@/lib/i18n/routing";
 
 import "./globals.css";
 import { ThemeProvider } from "./theme-provider";

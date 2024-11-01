@@ -1,7 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 
-import { Locale } from "@/i18n/config";
 import db from "@/lib/db";
+import { Locale } from "@/lib/i18n/config";
 
 export default async function Test({
   params,

@@ -22,8 +22,8 @@ import {
   Lead,
   P,
 } from "@/components/ui/typography";
-import { Locale } from "@/i18n/config";
-import { Link } from "@/i18n/routing";
+import { Locale } from "@/lib/i18n/config";
+import { Link } from "@/lib/i18n/routing";
 
 import LocaleSwitcher from "./locale-switcher";
 import { ThemeSwitcher } from "./theme-switcher";

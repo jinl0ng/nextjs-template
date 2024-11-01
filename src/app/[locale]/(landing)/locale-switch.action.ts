@@ -2,8 +2,8 @@
 
 import { cookies } from "next/headers";
 
-import { Locale, i18n } from "@/i18n/config";
-import { redirect } from "@/i18n/routing";
+import { Locale, i18n } from "@/lib/i18n/config";
+import { redirect } from "@/lib/i18n/routing";
 
 type Href = Parameters<typeof redirect>[0]["href"];
 
