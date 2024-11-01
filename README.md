@@ -19,12 +19,16 @@
   - server state (react query) ⬜️
   - client state (zustand) ✅
 - setup server action (next-safe-action) ✅
-- setup test (vitest/playwright) ⬜️
-  - vitest for normal ts tests
-  - playwright for e2e tests and component tests
+- setup test (vitest/playwright) ✅
+  - vitest for normal ts tests (\*\*.test.ts files)
+  - playwright for e2e tests and component tests (e2e folder & \*\*.spec.ts files)
 - setup project structure (bulletproof) ⬜️
   - add a todo feature ⬜️
 - setup build and deploy (docker/docker-compose/makefile) ⬜️
+  - ci/cd pipeline ⬜️
+    - unit tests ⬜️
+    - component tests ⬜️
+    - e2e tests ⬜️
   - setup cache (redis) ⬜️
 - setup utopia ⬜️
 - setup sentry/analytics/logs ⬜️

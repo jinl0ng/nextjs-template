@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/experimental-ct-react";
 
-import { ChartComp } from "./chart-comp";
+import { ChartComp } from "@/app/[locale]/test/chart-comp";
 
 test("should work", async ({ mount }) => {
   const component = await mount(<ChartComp />);

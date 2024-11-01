@@ -19,7 +19,8 @@
     "db:seed": "dotenvx run -f .env.development -- tsx ./prisma/seed.ts",
     "db:wipe": "dotenvx run -f .env.development -- prisma migrate reset --force && prisma db push",
     "db:studio": "dotenvx run -f .env.development -- prisma studio",
-    "test-ct": "playwright test -c playwright-ct.config.ts"
+    "test-ct": "playwright test -c playwright-ct.config.ts",
+    "test": "vitest"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -102,7 +103,8 @@
     "prisma": "^5.21.1",
     "tailwindcss": "^3.4.14",
     "tsx": "^4.19.2",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
   },
   "pnpm": {
     "overrides": {
