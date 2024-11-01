@@ -59,7 +59,7 @@
     "embla-carousel-react": "^8.3.1",
     "input-otp": "^1.2.5",
     "lucide-react": "^0.454.0",
-    "next": "15.0.3-canary.2",
+    "next": "15.0.3-canary.3",
     "next-intl": "^3.24.0",
     "next-themes": "^0.3.0",
     "prisma-extension-soft-delete": "^2.0.0",

@@ -5,6 +5,7 @@
 - setup shadcn
 - setup next-intl
 - add simple landing page
+- setup runtime typecheck (zod)
 - setup prisma
   - multiple envs
   - soft delete
@@ -14,16 +15,17 @@
 
 - setup auth
 - setup nuqs
-- setup project structure (bulletproof)
 - setup state management
   - client state (zustand)
   - server state (react query)
 - setup server action (zsa)
-- setup runtime typecheck (zod)
 - setup test (vitest/testing-library/playwright)
+- setup project structure (bulletproof)
+  - add a todo feature
 - setup build and deploy (docker/docker-compose/makefile)
   - setup cache (redis)
-- setup sentry
 - setup utopia
+- setup sentry
 - setup nextui (optional)
 - setup payment (stripe/lemonsqueezy)
+- multi-tenant
