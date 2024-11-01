@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 
 import { Locale } from "@/lib/i18n/config";
 import { routing } from "@/lib/i18n/routing";
@@ -39,7 +40,7 @@ export default async function RootLayout({
       <body className="antialiased">
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            {children}
+            <NuqsAdapter>{children}</NuqsAdapter>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

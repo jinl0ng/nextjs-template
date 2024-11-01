@@ -25,7 +25,13 @@
 - setup build and deploy (docker/docker-compose/makefile)
   - setup cache (redis)
 - setup utopia
-- setup sentry
+- setup sentry/analytics/logs
 - setup nextui (optional)
 - setup payment (stripe/lemonsqueezy)
 - multi-tenant
+- seo optimize
+  - robots.txt
+  - sitemap.xml
+  - manifest.json
+  - favicon.ico
+  - opengraph image
