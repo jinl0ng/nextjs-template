@@ -19,7 +19,9 @@
   - server state (react query) ⬜️
   - client state (zustand) ✅
 - setup server action (next-safe-action) ✅
-- setup test (vitest/testing-library/playwright) ⬜️
+- setup test (vitest/playwright) ⬜️
+  - vitest for normal ts tests
+  - playwright for e2e tests and component tests
 - setup project structure (bulletproof) ⬜️
   - add a todo feature ⬜️
 - setup build and deploy (docker/docker-compose/makefile) ⬜️
