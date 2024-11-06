@@ -1,7 +1,7 @@
 {
   "extends": ["next/core-web-vitals", "next/typescript", "prettier"],
   "ignorePatterns": ["src/components/ui/**/*", "src/hooks/use-toast.ts"],
-  "plugins": ["check-file", "n"],
+  "plugins": ["check-file", "n", "import"],
   "rules": {
     "react/jsx-no-literals": "warn",
     "no-restricted-imports": [
@@ -19,7 +19,10 @@
           "usePathname"
         ],
         "message": "Please import from `@/i18n/routing` instead."
-      },
+      }
+    ],
+    "import/no-restricted-paths": [
+      "error",
       {
         "zones": [
           // disables cross-feature imports:
