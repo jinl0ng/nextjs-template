@@ -1,6 +1,7 @@
+import { revalidateTag } from "next/cache";
+
 import { setRequestLocale } from "next-intl/server";
 
-import db from "@/lib/db";
 import { Locale } from "@/lib/i18n/config";
 
 export default async function Test({
@@ -10,17 +11,19 @@ export default async function Test({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const users = await db.user.findMany();
+  const dogs = await fetch("https://dog.ceo/api/breeds/image/random", {
+    next: { tags: ["dogs"], revalidate: 10 },
+  }).then((res) => res.json());
   return (
     <div>
-      {JSON.stringify(users)}
+      <div>Pages: {JSON.stringify(dogs)}</div>
       <button
         onClick={async () => {
           "use server";
-          await db.user.delete({ where: { id: 1 } });
+          revalidateTag("dogs");
         }}
       >
-        Delete
+        Refresh
       </button>
     </div>
   );
