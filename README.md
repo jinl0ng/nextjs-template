@@ -11,6 +11,7 @@
   - soft delete ✅
 - setup typed env (t3-env/dotenvx) ✅
 - setup nuqs ✅
+- setup mdx ✅
 - setup auth (lucia) ⬜️
   - google oauth ⬜️
   - email/password ⬜️

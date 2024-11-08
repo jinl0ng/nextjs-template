@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 
+import createMDX from "@next/mdx";
 import { createJiti } from "jiti";
 import createNextIntlPlugin from "next-intl/plugin";
 import { fileURLToPath } from "node:url";
@@ -27,6 +28,10 @@ const nextConfig: NextConfig = {
     ppr: "incremental",
     reactCompiler: true,
   },
+  pageExtensions: ["ts", "tsx", "mdx", "md"],
 };
+const withMDX = createMDX({
+  // Add markdown plugins here, as desired
+});
 
-export default withNextIntl(nextConfig);
+export default withNextIntl(withMDX(nextConfig));
