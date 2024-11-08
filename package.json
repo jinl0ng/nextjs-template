@@ -73,7 +73,7 @@
     "nuqs": "^2.1.1",
     "prisma-extension-soft-delete": "^2.0.0",
     "react": "19.0.0-rc-1631855f-20241023",
-    "react-day-picker": "9.3.0",
+    "react-day-picker": "8.10.1",
     "react-dom": "19.0.0-rc-1631855f-20241023",
     "react-hook-form": "^7.53.1",
     "react-resizable-panels": "^2.1.6",

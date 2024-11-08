@@ -4,6 +4,8 @@ import { setRequestLocale } from "next-intl/server";
 
 import { Locale } from "@/lib/i18n/config";
 
+import { ChartComp } from "./chart-comp";
+
 export default async function Test({
   params,
 }: {
@@ -25,6 +27,7 @@ export default async function Test({
       >
         Refresh
       </button>
+      <ChartComp />
     </div>
   );
 }

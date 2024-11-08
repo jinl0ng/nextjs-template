@@ -36,10 +36,8 @@ export default async function BlogPage({ params }: BlogPageProps) {
   setRequestLocale(locale);
   const BlogMarkdown = dynamic(() => import(`@/blog/${post}.mdx`));
   return (
-    <div className="p-4">
-      <article className="prose prose-neutral dark:prose-invert lg:prose-xl mx-auto w-fit">
-        <BlogMarkdown />
-      </article>
-    </div>
+    <article className="prose prose-neutral dark:prose-invert lg:prose-xl mx-auto w-fit">
+      <BlogMarkdown />
+    </article>
   );
 }
